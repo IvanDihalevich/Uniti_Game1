@@ -10,6 +10,7 @@ namespace Code
         [SerializeField]
         private float _speed;
 
+        public float Speed => _rigidbody.velocity.x;
         public void Move(float input)
         {
             _rigidbody.velocity = new Vector2(input * _speed, _rigidbody.velocity.y);
